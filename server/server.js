@@ -16,6 +16,21 @@ const normalizePort = val => {
 const port = normalizePort(process.env.PORT || "3000");
 app.set("port", port);
 
+// cors
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS, PATCH",
+  );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials",
+  );
+  res.header("Access-Control-Allow-Credentials", "true");
+  next();
+});
+
 const errorHandler = error => {
   console.log("ERROR HANDLER::::", error);
   if (error.syscall !== "listen") {
