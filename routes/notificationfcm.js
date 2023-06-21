@@ -6,6 +6,6 @@ const sendNotification = async(req, res) => {
     notificationController.sendNotification(req, res);
 }
 
-router.post('/send1', sendNotification);
+router.post('/send', sendNotification);
 
 module.exports = router;
