@@ -34,14 +34,13 @@ const sendNotification = async(req, res) => {
                 }
             }
             fcm.send(message, (err, response) => {
-                res.send(response);
-                // if (err) {
-                //     console.log("Something has gone wrong!", JSON.stringify(err));
-                //     res.send(err);
-                // } else {
-                //     console.log("Successfully sent with response: ", response);
-                //     res.send(response)
-                // }
+                if (err) {
+                    console.log("Something has gone wrong!", JSON.stringify(err));
+                    res.send(err);
+                } else {
+                    console.log("Successfully sent with response: ", response);
+                    res.send(response)
+                }
             });
         } else {
             res.send({ message: "No registration ids found." });
