@@ -5,7 +5,7 @@ const firebaseAdmin = require("firebase-admin");
 const serviceAccount = require("../securefiles/ble-sample-app-firebase-adminsdk.json");
 const serverKey = "AAAAAbFpaFw:APA91bHdjIFoKbS9BR5SOifoppb3jblQfEux39zHPus2BF2H2VT-KZmHKGd2xQoUs6rFHTnlnvLDJ3yWrJIeJEza1RLq9_TQtlqC2cFXc8GXbsPzIVpVQlIXR1hOBBC41g-5IXe8ChC4";
 // const fcm = new FCM(serverKey); 
-
+//
 // firebaseAdmin.initializeApp();
 // const app = initializeApp();
 
