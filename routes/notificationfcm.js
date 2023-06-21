@@ -2,10 +2,10 @@ var express = require("express");
 var router = express.Router();
 const notificationController = require("../controllers/notificationfcm");
 
-const sendNotification = async(request, response) => {
-    notificationController.sendNotification(request, response);
+const sendNotification = async(req, res) => {
+    notificationController.sendNotification(req, res);
 }
 
-router.post('/send', sendNotification);
+router.post('/send1', sendNotification);
 
 module.exports = router;
